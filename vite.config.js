@@ -4,13 +4,14 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig, normalizePath } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import autoprefixer from 'autoprefixer'
+import viteEslint from 'vite-plugin-eslint'
 
 const variablePath = normalizePath(path.resolve(__dirname, './src/assets/css/variable.scss'))
 
 // https://vitejs.dev/config/
 export default defineConfig({
   // root: path.join(__dirname, 'src'),
-  plugins: [vue()],
+  plugins: [vue(), viteEslint()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
