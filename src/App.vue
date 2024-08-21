@@ -21,7 +21,6 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import HeaderVue from '@/components/Header/index.vue'
 
-const name = 'xxx'
 </script>
 
 <style scoped>
