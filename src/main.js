@@ -14,5 +14,7 @@ app.use(router)
 
 app.mount('#app')
 
-console.log('text')
-console.log('text')
+console.log('text1')
+console.log('text2')
+console.log('text3')
+
