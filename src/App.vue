@@ -12,15 +12,23 @@
     </div>
   </header>
   <header-vue></header-vue>
-
+  <img :src="logoSrc" alt="" />
+  <!-- <img :src="str" /> -->
   <RouterView />
+  <Logo />
 </template>
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import HeaderVue from '@/components/Header/index.vue'
+import logoSrc from '@assets/imgs/vite.png'
+import Logo from '@/assets/icons/logo.svg'
+const str = new URL('./logo.png', import.meta.env.VITE_IMG_BASE_URL).href
 
+// const icons = import.meta.glob('@assets/icons/logo-*.svg')
+const icons = import.meta.glob('@assets/icons/logo-*.svg', { eager: true })
+console.log(icons)
 </script>
 
 <style scoped>
@@ -84,5 +92,9 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+
+img {
+  background: url('@assets/imgs/background.png') no-repeat;
 }
 </style>
